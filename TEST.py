@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Horario de funcionamiento
 import schedule
 #El reloj me registra la hora actual
@@ -17,6 +18,13 @@ schedule.every(1).wednesday.at("19:08").do(job)
 while True:
       schedule.run_pending()
       time.sleep(1)
+=======
+#El reloj me registra la hora actual
+import time
+localtime = time.asctime (time.localtime(time.time()))
+print ("Local current time:")
+print (localtime)
+>>>>>>> 242f2b5f59fcad01a679659d1d6334dc7f4ff95d
 #Caledario del Mes actual
 import calendar
 cal= calendar.month (2018,10)
