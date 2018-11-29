@@ -62,7 +62,40 @@ elif Pastilla2 < 20 :
 #trabajar en pantalla de confirmacion antes de entregar.
     print ("Entregando medicamento")
 
-#Funcionamiento LED
+#Funcionamiento LED Accionarlo con los sensores infrarrojo 
+
+import Rpi.GPIO as GPIO 
+GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(11,GPIO.OUT)
+GPIO.ouput(11,True)
+time.sleep(1)
+GPIO.output(11,False)
+time.sleep(1) 
 
 
-#Código basico servos
+#Código basico servos servo 2 helices
+import Rpi.GPIO as GPIO 
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(11,GPIO.OUT)
+pwm=GPIO.PWM(11,50)
+pwm.start(7) #posion inicial
+pwm.ChangeDutyCycle(3) #0 grados totalmente derecho
+pwm.ChangeDutyCycle(12) #180 grados totalmente izquierdo
+pwm.stop()
+GPIO.cleanup()
+
+
+#Código basico servos servo 4 helices
+import Rpi.GPIO as GPIO 
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(13,GPIO.OUT)
+pwm=GPIO.PWM(13,50)
+pwm.start(6) #posion inicial
+pwm.ChangeDutyCycle(2.5) #0 grados totalmente derecho
+pwm.ChangeDutyCycle(10.5 #180 grados totalmente izquierdo
+pwm.stop()
+GPIO.cleanup()
+
+
+
