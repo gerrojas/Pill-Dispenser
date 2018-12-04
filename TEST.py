@@ -74,6 +74,9 @@ GPIO.output(11,False)
 time.sleep(1) 
 
 
+
+
+
 #Código basico servos servo 2 helices
 import Rpi.GPIO as GPIO 
 GPIO.setmode(GPIO.BOARD)
@@ -98,4 +101,6 @@ pwm.stop()
 GPIO.cleanup()
 
 
-
+#boton para dispensar medicamento.
+#para shchedule.check
+                    #whiletrue para "es hora para entregar". (revisar el sistema)
